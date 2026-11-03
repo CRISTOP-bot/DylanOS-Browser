@@ -6,13 +6,13 @@
 <!-- TODO: Get a job -->
 <img src="./docs/assets/zen-dark.svg" width="100px" align="left">
 
-### `Zen Browser`
+### `DylanOS Browser`
 
 [![Downloads](https://img.shields.io/github/downloads/zen-browser/desktop/total.svg)](https://github.com/zen-browser/desktop/releases)
 [![Crowdin](https://badges.crowdin.net/zen-browser/localized.svg)](https://crowdin.com/project/zen-browser)
 [![Zen Release builds](https://github.com/zen-browser/desktop/actions/workflows/build.yml/badge.svg?branch=stable)](https://github.com/zen-browser/desktop/actions/workflows/build.yml)
 
-Zen is a firefox-based browser with the aim of pushing your productivity to a new level!
+DylanOS Browser is a community fork of Zen Browser, based on Firefox, tuned for DylanOS with Crimson branding and productivity features. It retains the upstream Zen Browser project attribution and Mozilla Public License 2.0 requirements. See [DylanOS Browser notes](./DYLANOS-BROWSER.md) for fork scope and current validation status.
 
 <div flex="true">
   <a href="https://zen-browser.app/download">
@@ -50,3 +50,8 @@ Thanks to all the [sponsors](https://zen-browser.app/#sponsors) of Zen for their
 <a href="https://blacksmith.sh">
   <img src="./docs/assets/blacksmith-yellow.png" width="350px"/>
 </a>
+
+
+### Fork status
+
+Branding and preference changes are source-only; no DylanOS Browser binary has been built or verified.

@@ -51,10 +51,10 @@
   condition: "defined(MOZILLA_OFFICIAL)"
 
 - name: browser.profiles.enabled
-  value: false
+  value: true
 
 - name: browser.tabs.groups.enabled
-  value: false
+  value: true
 
 - name: browser.urlbar.scotchBonnet.enableOverride
   value: false
@@ -84,8 +84,7 @@
   value: true
 
 - name: browser.tabs.splitView.enabled
-  value: false
-  locked: true
+  value: true
 
 # See gh-13853 for details on why we should disable this preference
 - name: browser.privatebrowsing.resetPBM.enabled
@@ -123,4 +122,4 @@
 
 - name: browser.sessionstore.interval
   # Interval in milliseconds (40 seconds, firefox defaults to 15000, but we write twice for our stores)
-  value: 40000
+  value: 30000

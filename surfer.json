@@ -1,7 +1,7 @@
 {
-  "name": "Zen Browser",
-  "vendor": "Zen OSS Team",
-  "appId": "zen",
+  "name": "DylanOS Browser",
+  "vendor": "DylanOS",
+  "appId": "dylanos-browser",
   "binaryName": "zen",
   "version": {
     "product": "firefox",
@@ -15,14 +15,14 @@
   "addons": {},
   "brands": {
     "release": {
-      "backgroundColor": "#282A33",
-      "brandShorterName": "Zen",
-      "brandShortName": "Zen",
-      "brandFullName": "Zen Browser",
+      "backgroundColor": "#110D13",
+      "brandShorterName": "DylanOS",
+      "brandShortName": "DylanOS Browser",
+      "brandFullName": "DylanOS Browser",
       "release": {
         "displayVersion": "1.24b",
         "github": {
-          "repo": "zen-browser/desktop"
+          "repo": "CRISTOP-bot/DylanOS-Browser"
         },
         "archives": {
           "windows": "windows.mar",
@@ -35,14 +35,14 @@
       }
     },
     "twilight": {
-      "backgroundColor": "#282A33",
-      "brandShorterName": "Zen",
-      "brandShortName": "Twilight",
-      "brandFullName": "Zen Twilight",
+      "backgroundColor": "#110D13",
+      "brandShorterName": "DylanOS",
+      "brandShortName": "DylanOS Browser Twilight",
+      "brandFullName": "DylanOS Browser Twilight",
       "release": {
         "displayVersion": "1.25t",
         "github": {
-          "repo": "zen-browser/desktop"
+          "repo": "CRISTOP-bot/DylanOS-Browser"
         }
       }
     }
