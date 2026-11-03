@@ -18,3 +18,5 @@ DylanOS Browser is a community fork of Zen Browser, based on Firefox. This repos
 ## Build status
 
 These are source and branding changes only. No DylanOS Browser binary has been built or tested yet. Follow upstream build instructions and test Linux release artifacts before distribution.
+
+The workflow `DylanOS Browser source checks` validates brand metadata, preferences, MPL notices and icon file formats on pushes and pull requests to `dev`. It is not Firefox compilation or runtime QA.

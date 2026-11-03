@@ -1,0 +1,22 @@
+name: DylanOS Browser source checks
+
+on:
+  push:
+    branches: [dev]
+  pull_request:
+    branches: [dev]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  branding-and-preferences:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate branding, preferences and license contracts
+        run: python3 scripts/check-dylanos-browser.py
