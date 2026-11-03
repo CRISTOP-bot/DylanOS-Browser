@@ -53,12 +53,20 @@ require("Mozilla Public License Version 2.0" in license_text, "upstream MPL text
 require("MPL 2.0" in (ROOT / "DYLANOS-BROWSER.md").read_text(encoding="utf-8"), "fork license/source notes present")
 
 for channel in ("release", "twilight"):
-    for size in (16, 22, 24, 32, 48, 64, 128, 256, 512, 1024):
-        path = ROOT / f"configs/branding/{channel}/logo{size}.png"
+    brand_dir = ROOT / "configs/branding" / channel
+    image_files = list(brand_dir.rglob("*.png")) + list(brand_dir.rglob("*.ico"))
+    require(bool(image_files), f"{channel} image assets exist")
+    for path in image_files:
         data = path.read_bytes()
-        require(data[:8] == b"\x89PNG\r\n\x1a\n", f"{channel} {size}px icon PNG")
+        if path.suffix.lower() == ".png":
+            require(data.startswith(b"\x89PNG\r\n\x1a\n"), f"valid PNG: {path.relative_to(ROOT)}")
+        else:
+            require(data.startswith(b"\x00\x00\x01\x00"), f"valid ICO: {path.relative_to(ROOT)}")
+    for size in (16, 22, 24, 32, 48, 64, 128, 256, 512, 1024):
+        path = brand_dir / f"logo{size}.png"
+        data = path.read_bytes()
         width, height = struct.unpack(">II", data[16:24])
-        require((width, height) == (size, size), f"{channel} icon dimensions {size}x{size}")
+        require((width, height) == (size, size), f"{channel} logo dimensions {size}x{size}")
 for name in ("about-logo.svg", "about-logo-private.svg", "about-wordmark.svg"):
     ET.parse(ROOT / "configs/branding/release/content" / name)
     require(True, f"well-formed release SVG: {name}")
